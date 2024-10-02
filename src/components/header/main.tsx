@@ -1,27 +1,12 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Navigation from "./navigation"
 import { Button } from '../ui/button'
+import { useTheme } from 'next-themes'
 
 function Main() {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    useEffect(() => {
-        // Check localStorage for the theme key
-        const storedTheme = localStorage.getItem('theme');
-        if (storedTheme === 'dark') {
-            document.documentElement.classList.add('dark');
-            setIsDarkMode(true);
-        }
-    }, []);
-
-    const handleToggle = () => {
-        const newTheme = !isDarkMode ? 'dark' : 'light';
-        setIsDarkMode(!isDarkMode);
-        document.documentElement.classList.toggle('dark');
-        localStorage.setItem('theme', newTheme);
-    };
+    const { theme, setTheme } = useTheme()
 
     return (
         <div className='fixed flex w-full mx-auto top-0 z-20 px-5'>
@@ -30,7 +15,7 @@ function Main() {
                 <div>
                     <ul className='flex gap-2'>
                         <li>language</li>
-                        <li onClick={handleToggle} className='cursor-pointer' >theme</li>
+                        <li onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className='cursor-pointer' >them</li>
                         <li>search</li>
                     </ul>
                 </div>
