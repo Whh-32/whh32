@@ -24,7 +24,7 @@ function Hero() {
                     <strong className="font-bold block text-primary/90">best example</strong>
                     at Your job
                 </h1>
-                <div className="flex h-screen gap-2">
+                <div className="flex gap-2">
                     <ConfettiSideCannons />
                     <Button>start free</Button>
                 </div>
