@@ -57,13 +57,13 @@ const Cat = () => {
       />
       <div ref={catRef} className="w-20 h-10 mx-auto absolute top-[100px]">
         <div className="absolute top-0 left-0 w-full h-full rounded-full flex items-center justify-center">
-          <div className="relative w-6 h-6 bg-sky-950 rounded-full flex items-center justify-center">
+          <div className="relative w-6 h-6 rounded-full flex items-center justify-center">
             <div
               className={`absolute bg-blue-50 rounded-full duration-75`}
               style={eyeStyle(eyeX, eyeY, isBlinking)}
             ></div>
           </div>
-          <div className="relative w-6 h-6 bg-sky-950 rounded-full ml-2 flex items-center justify-center">
+          <div className="relative w-6 h-6 rounded-full ml-2 flex items-center justify-center">
             <div
               className="absolute bg-blue-50 rounded-full duration-75"
               style={eyeStyle(eyeX, eyeY, isBlinking)}
