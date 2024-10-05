@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Button } from "@/components/ui/button";
-import { ConfettiButton } from "@/components/ui/confetti";
+import { ConfettiSideCannons } from "@/components/header/buttonConfetti";
 import BlurFade from "@/components/ui/blur-fade";
 import Image from 'next/image';
 //statics
@@ -25,7 +25,7 @@ function Hero() {
                     at Your job
                 </h1>
                 <div className="flex h-screen gap-2">
-                    <ConfettiButton>Confetti 🎉</ConfettiButton>
+                    <ConfettiSideCannons />
                     <Button>start free</Button>
                 </div>
             </BlurFade>
