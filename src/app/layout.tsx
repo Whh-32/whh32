@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/header/main"
+import FirstLoad from '@/components/rive/firstLoad'
 import { ThemeProvider } from 'next-themes'
 
 const geistSans = localFont({
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html dir="ltr" lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased dark:dark `} >
+        <FirstLoad />
         <ThemeProvider attribute="class">
           <Header />
           {children}

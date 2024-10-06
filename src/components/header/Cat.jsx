@@ -44,7 +44,7 @@ const Cat = () => {
   const constrain = (value, min, max) => Math.max(min, Math.min(value, max));
 
   const eyeX = constrain(position.x / 20, -3, 3);
-  const eyeY = constrain(position.y / 20, -3, 3);
+  const eyeY = constrain(position.y / 20, -4, 4);
 
   // const isMouseCenter = Math.abs(position.x) < 55 && Math.abs(position.y) < 55;
 
@@ -53,11 +53,11 @@ const Cat = () => {
       <Image
         src={ghost}
         alt="ghost"
-        className='w-[500px] mix-blend-color-dodge'
+        className='w-[500px]'
       />
       <div ref={catRef} className="w-20 h-10 mx-auto absolute top-[100px]">
         <div className="absolute top-0 left-0 w-full h-full rounded-full flex items-center justify-center">
-          <div className="relative w-6 h-6 rounded-full flex items-center justify-center">
+          <div className="relative w-6 h-6 rounded-full flex items-center justify-center bg">
             <div
               className={`absolute bg-blue-50 rounded-full duration-75`}
               style={eyeStyle(eyeX, eyeY, isBlinking)}
@@ -76,11 +76,6 @@ const Cat = () => {
 };
 
 export default Cat;
-
-
-
-
-
 
 
 

@@ -7,6 +7,8 @@ export function ConfettiSideCannons() {
   const handleClick = () => {
     const end = Date.now() + 3 * 1000; // 3 seconds
     const colors = ["#33C7EF", "#81EFBA", "#81EFBA", "#81EFBA"];
+    // const scalar = 8;
+    // const unicorn = confetti.shapeFromText({ text: "🔥", scalar });
 
     const frame = () => {
       if (Date.now() > end) return;
@@ -17,6 +19,7 @@ export function ConfettiSideCannons() {
         spread: 55,
         startVelocity: 60,
         origin: { x: 0, y: 0.5 },
+        // shapes: [unicorn],
         colors: colors,
       });
       confetti({
@@ -25,6 +28,7 @@ export function ConfettiSideCannons() {
         spread: 55,
         startVelocity: 60,
         origin: { x: 1, y: 0.5 },
+        // shapes: [unicorn],
         colors: colors,
       });
 
