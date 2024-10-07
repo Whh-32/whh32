@@ -14,12 +14,12 @@ export const RiveDemo = () => {
     });
 
 
-    return <RiveComponent />;
+    return <RiveComponent className="h-full w-full" />;
 };
 
 export default function RiveEXE() {
     return (
-        <div className="h-[400px] w-[400px] z-10">
+        <div className="h-[400px] w-[400px] z-10 md:absolute right-0 mt-20 md:mt-auto">
             <RiveDemo />
         </div>
     );

@@ -1,0 +1,18 @@
+.neon-effect {
+    box-shadow: 0 0 10px hsl(var(--secondary)), 0 0 20px hsl(var(--secondary)), 0 0 30px hsl(var(--secondary)), 0 0 60px hsl(var(--secondary));
+  }
+  .half-circle {
+    clip-path: ellipse(50% 100% at 50% 0%);
+    border: 2px solid hsl(var(--secondary));
+  }
+  .animate-neon {
+    animation: neon 1.5s infinite alternate;
+  }
+  @keyframes neon {
+    from {
+      box-shadow: 0 0 10px hsl(var(--secondary)), 0 0 20px hsl(var(--secondary)), 0 0 30px hsl(var(--secondary)), 0 0 60px hsl(var(--secondary));
+    }
+    to {
+      box-shadow: 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--secondary)), 0 0 40px hsl(var(--secondary)), 0 0 80px hsl(var(--secondary));
+    }
+  }

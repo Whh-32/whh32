@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export function ConfettiSideCannons() {
   const handleClick = () => {
     const end = Date.now() + 3 * 1000; // 3 seconds
-    const colors = ["#33C7EF", "#81EFBA", "#81EFBA", "#81EFBA"];
+    const colors = ["#D6AE2B", "#6952E0", "#81EFBA", "#81EFBA"];
     // const scalar = 8;
     // const unicorn = confetti.shapeFromText({ text: "🔥", scalar });
 
