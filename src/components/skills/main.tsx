@@ -49,7 +49,7 @@ function Main() {
         },
         {
             percent: 75,
-            title: "git"
+            title: "Git"
         }
     ]
     return (
