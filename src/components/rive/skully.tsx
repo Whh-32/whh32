@@ -1,14 +1,13 @@
 "use client";
 
 import { useRive } from "@rive-app/react-canvas";
-import { ReactElement } from "react";
 // import riveWasmUrl from "@rive-app/canvas/rive.wasm";
 
 // Set the WASM URL
 // RuntimeLoader.setWasmUrl(riveWasmUrl);
 
 export const RiveDemo = () => {
-    const { rive, RiveComponent } = useRive({
+    const { RiveComponent } = useRive({
         src: "skully.riv",
         stateMachines: "State Machine [Skully]",
         autoplay: true,
