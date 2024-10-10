@@ -8,7 +8,7 @@ import Skully from "@/components/rive/skully";
 
 function Hero() {
     return (
-        <div className="w-full max-w-6xl mx-auto px-5 relative md:flex">
+        <div className="w-full max-w-6xl mx-auto px-5 relative md:flex md:pt-56 hero">
             <div className='fcc'>
                 <Skully />
             </div>
