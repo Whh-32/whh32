@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.input {
+  height: 44px;
+  border-radius: 0.375rem;
+  border: 1px solid hsl(var(--border));
+  padding: 0 0.75rem;
+  background: hsl(var(--background));
+  outline: none;
+}
+.input:focus {
+  box-shadow: 0 0 0 2px hsl(var(--primary));
+}
+
+
 body {
   font-family: var(--font-geist-sans);
 }

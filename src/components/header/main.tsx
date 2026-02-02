@@ -1,11 +1,13 @@
 "use client"
 
-import React from 'react'
 import Navigation from "./navigation"
 import { Button } from '../ui/button'
 import { useTheme } from 'next-themes'
+import Link from 'next/link'
+import { useRouter } from "next/navigation"
 
 function Main() {
+    const router = useRouter()
     const { theme, setTheme } = useTheme()
 
     return (
@@ -20,8 +22,8 @@ function Main() {
                     </ul>
                 </div>
                 <div className='fcc'>
-                    <div className='px-2 mr-2'>Log in</div>
-                    <Button className='font-bold'>Sign up</Button>
+                    <Link href={'/auth/login'} className='px-2 mr-2'>Log in</Link>
+                    <Button onClick={() => {router.push('/auth/register')}} className='font-bold'>Sign up</Button>
                 </div>
             </header>
         </div>
