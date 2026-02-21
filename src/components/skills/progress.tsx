@@ -44,17 +44,17 @@ export function ProgressCircular({ percent, title }: PropsType) {
     }, [isVisible])
 
     return (
-        <div ref={elementRef} className="fcc flex-col">
+        <div ref={elementRef} className="fcc flex-col group-hover/skill:scale-105 transition-transform duration-300">
             <AnimatedCircularProgressBar
                 max={100}
                 min={0}
                 value={animatedValue}
-                className="w-32 text-lg"
+                className="w-24 sm:w-28 text-base"
                 gaugePrimaryColor="hsl(var(--primary))"
                 gaugeSecondaryColor="hsl(var(--secondary))"
             />
 
-            <div className="mt-4 text-lg text-foreground">{title}</div>
+            <div className="mt-3 text-sm sm:text-base font-medium text-foreground text-center">{title}</div>
         </div>
     );
 }
