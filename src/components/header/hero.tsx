@@ -25,29 +25,26 @@ function Hero() {
     }
 
     return (
-        <div className="w-full max-w-6xl mx-auto px-5 relative md:flex hero min-h-screen flex items-center pt-16 md:pt-20">
-            <div className='fcc'>
-                <Skully />
-            </div>
-            <BlurFade delay={0.25} inView className="flex flex-col items-center md:items-start w-full">
+        <div className="w-full max-w-6xl mx-auto px-4 sm:px-5 relative hero min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-8 ">
+
+            <BlurFade delay={0.25} inView className="flex flex-col items-center md:items-start w-full md:flex-1">
                 <div className="flex items-center gap-2 mb-4 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
                     <Code className="w-4 h-4 text-primary" />
-                    <span className="text-sm text-primary font-medium">Full-Stack Developer</span>
+                    <span className="text-xs sm:text-sm text-primary font-medium">Full-Stack Developer</span>
                 </div>
-                <h1 className="mt-6 w-full font-heading text-4xl font-normal leading-[1.25] drop-shadow-md sm:mt-8 sm:text-5xl sm:leading-[1.15] lg:text-5xl lg:leading-[1.15] xl:text-6xl xl:leading-[1.15] mb-6 text-center md:text-justify flex flex-col md:mt-0">
+                <h1 className="mt-4 sm:mt-6 md:mt-0 w-full font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-[1.25] sm:leading-[1.15] drop-shadow-md mb-4 sm:mb-6 text-center md:text-left flex flex-col">
                     Creating stunning
                     <strong className="text-primary/90">user-friendly</strong>
                     websites
                 </h1>
-                <p className="text-lg text-muted-foreground mb-8 text-center md:text-left max-w-2xl">
+                <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 text-center md:text-left max-w-2xl w-full">
                     I transform ideas into beautiful, functional web experiences.
                     Specialized in React, Next.js, and Node.js development.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                    <ConfettiSideCannons />
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
                     <Button
                         onClick={() => handleSmoothScroll('contact')}
-                        className="group bg-primary hover:bg-primary/90"
+                        className="group bg-primary hover:bg-primary/90 w-full sm:w-auto"
                     >
                         Get In Touch
                         <ArrowDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform" />
@@ -55,11 +52,16 @@ function Hero() {
                     <Button
                         variant="outline"
                         onClick={() => handleSmoothScroll('projects')}
+                        className="w-full sm:w-auto"
                     >
                         View My Work
                     </Button>
+                    <ConfettiSideCannons />
                 </div>
             </BlurFade>
+            <div className='fcc w-full md:w-auto md:flex-shrink-0'>
+                <Skully />
+            </div>
             <ScrollIndicator />
         </div>
     )

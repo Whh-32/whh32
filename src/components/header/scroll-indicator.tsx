@@ -14,7 +14,7 @@ function ScrollIndicator() {
 
   return (
     <motion.div
-      className="absolute bottom-10 left-1/2 transform -translate-x-1/2 cursor-pointer z-10"
+      className="sm:flex absolute bottom-6 md:bottom-10  cursor-pointer z-10"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 1, duration: 0.5 }}
@@ -29,8 +29,8 @@ function ScrollIndicator() {
         }}
         className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
       >
-        <span className="text-sm font-medium">Scroll Down</span>
-        <ChevronDown className="w-5 h-5" />
+        <span className="text-xs sm:text-sm font-medium">Scroll Down</span>
+        <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
       </motion.div>
     </motion.div>
   )

@@ -44,7 +44,7 @@ export default function Skully() {
     }, []);
 
     return (
-        <div ref={skullyRef} className="h-[400px] w-[400px] z-10 md:absolute right-0 mt-20 md:mt-auto skully">
+        <div ref={skullyRef} className="h-[250px] w-[250px] sm:h-[300px] sm:w-[300px] md:h-[400px] md:w-[400px] z-10 skully flex-shrink-0">
             <RiveDemo />
         </div>
     );

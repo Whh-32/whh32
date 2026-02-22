@@ -44,7 +44,7 @@ export function ConfettiSideCannons() {
 
   return (
     <div className="relative">
-      <Button onClick={handleClick}>Trigger Side Cannons</Button>
+      {/* <Button onClick={handleClick}>Trigger Side Cannons</Button> */}
     </div>
   );
 }
