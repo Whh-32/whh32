@@ -1,0 +1,9 @@
+version: "3.9"
+
+services:
+  front:
+    build: .
+    container_name: whh32-front
+    ports:
+      - "8000:3000"
+    restart: unless-stopped
